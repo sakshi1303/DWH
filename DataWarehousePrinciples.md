@@ -1,4 +1,4 @@
-## This file provides insights of DatawareHouse Principles
+## Insights of DatawareHouse Principles
 
 Fact Tables - Facts are the measurements resulting from a business process event and are numeric.
 Fact Table always contain foreign keys from each of its associated dimensions along with degenerate dimension keys and date/time stamps. They are primary target of computations 
