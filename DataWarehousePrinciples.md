@@ -8,7 +8,7 @@ Basic Fact Table Techniques
 
 Additive, Semi-Additive & Non-Additive Facts - 
 
-1. When facts can be summed across all the dimensions , those facts are called Additive Facts. For Example - credit/debit amount of a customers account.
+1. When facts can be summed across any of the dimensions , those facts are called Additive Facts. For Example - credit/debit amount of a customers account.
 2. When facts are summed across few dimensions but not all  , those are Semi-Additive Facts. Example - Balance cannot be summed in a particular space or time. 
    But can be summed when we need to calculate overall balance for a month/year or different accounts of a customer.
 3. When facts cannot be summed at all, they are Non-Additive Facts. Example - ratios, percentages.
