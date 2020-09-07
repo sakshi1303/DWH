@@ -29,4 +29,19 @@ Aggregated Facts - Numeric rollup of atomic facts to accelerate query performanc
 
 Consolidated Facts - When muliple process combine together to single consolidated fact to compare/analyse. For example comparing actual & predicted sales. It adds burden to ETL layer but ease the analytic burden.
 
+Basic Dimension Table Techniques
+
+Dimension Table Structure - Dimension Table has single primary key column and is embedded as a foreign key in any associated fact table. They are flat denormalised tables and the dimension attributes are populated with verbose descriptions. 
+
+Dimension Surrogate Keys - Primary key columns for dimensions cannot be operational system's natural key because the natural keys can change over time. Also, they can be created by more than one system which may be incompatible or poorly administered. It is suggested to use surrogate keys which are sequentially generated.
+
+Natural, Durable and Supernatural keys - Natural keys are created by operational source systems which are subject to business rules outside the control of DW/BI systems. For example, a employee resigns and can be rehired. So, a new durable key must be created that is persistant and does not change in this situation. This key is also refrerred to as durable supernatural key. 
+
+Drilling Down - adding a row header to an existing query which is appended to GROUP BY clause. Example - a school, student and class entity.
+
+Degenerate Dimensions - It has no associated dimension table. Example - invoice number but is a valid dimension key for fact tables at the line level item. These are most common with transaction and accumulating snapshot fact tables.
+
+Denormalised Flattened Dimension - The dimension table should be denormalised and many-to-one fixed depth hierarchies into separate attributes on a flattened dimension row which supports simplicity and speed.
+
+
 
