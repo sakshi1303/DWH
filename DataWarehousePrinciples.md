@@ -43,5 +43,17 @@ Degenerate Dimensions - It has no associated dimension table. Example - invoice 
 
 Denormalised Flattened Dimension - The dimension table should be denormalised and many-to-one fixed depth hierarchies into separate attributes on a flattened dimension row which supports simplicity and speed.
 
+7. Multiple Hierarchies can co-exist in one dimension. Example day to week, day to month, geographical hierarchies.
+8. Flags, Codes and Operational indicators should have complete meaning in full text defined in Dimensions. 
+9. NULL's must be avoided in Dimensions to avoid contraints like NOT NULL/Refrential Integrity etc. Instead use UNKNOWN/NOT APPLICABLE codes.
+10. Calendar Date Dimensions contains date attributes like day/week/month date, day, number, fiscal period etc and it does not act as foreign key to facts. Calendar date key to be used as YYYYMMDD for partitioning instead of a surrogate key.
+11. One dimension can be used as a reference in a fact table multiple times with different logical dimensions are called as Role Playing Dimensions. Ex - Date Dimensions.
+12. Various low cardinality flags or indicators can be grouped together and placed in a single JUNK dimensions rather than having separate dimemsions for each of them. This is also known as Transaction Profile Dimension.
+13. Snowflake dimension is normalised hieararchical multilevel dimensions which can negatively impact performance and contains exactly same information as that of flattened denormalised dimensions.
+14. Outtrigger dimension contains reference to another dimension table. Example bank account dimension can reference another dimension containing date when account was opened.
+
+
+    
+
 
 
